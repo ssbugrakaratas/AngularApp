@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col s12">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <div class="row">
+                    <div class="col s6">
+                        <form #calisanForm="ngForm" (ngSubmit)="onSubmit(calisanForm)">
+                            <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="calisan_servis.secili_calisan._id">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="isim" #name="ngModel" [(ngModel)]="calisan_servis.secili_calisan.isim" placeholder="Adınızı Soyadınızı Yazınız.">
+                                    <label>Ad-Soyad
+                                        <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="pozisyon" #name="ngModel" [(ngModel)]="calisan_servis.secili_calisan.pozisyon" placeholder="Pozisyonunuzu Yazınız.">
+                                    <label>Pozisyon
+                                        <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="ofis" #name="ngModel" [(ngModel)]="calisan_servis.secili_calisan.ofis" placeholder="Ofisinizi Yazınız.">
+                                    <label>Ofis
+                                        <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="maas" #name="ngModel" [(ngModel)]="calisan_servis.secili_calisan.maas" placeholder="Maaşınızı Yazınız.">
+                                    <label>Maas
+                                        <label class="red-text">*</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <button class="btn btn-custom right" type="button" (click)="resetForm(calisanForm)">Sıfırla</button>
+                                    <button class="btn btn-custom right" type="button">Kaydet</button>
+                                </div>
+                            </div>
+                        </form>
+
+
+                    </div>
+                    <div class="col s6">
+                        <span class="card-title">BAŞLIK</span>
+                        <p>calisan works!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
