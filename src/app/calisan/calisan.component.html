@@ -50,7 +50,30 @@
                     </div>
                     <div class="col s6">
                         <span class="card-title">BAŞLIK</span>
-                        <table class="responsive-table highlight">
+
+                        <cdk-virtual-scroll-viewport itemSize="5" style="height: 200px; ">
+                            <table class="responsive-table highlight">
+                                <thead>
+                                    <tr>
+                                        <th>İsim</th>
+                                        <th>Pozisyon</th>
+                                        <th>Ofis</th>
+                                        <th>Maas</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *cdkVirtualFor="let i of calisanServis.calisanlar">
+                                        <td>{{i.isim}}</td>
+                                        <td>{{i.pozisyon}}</td>
+                                        <td>{{i.ofis}}</td>
+                                        <td>{{i.maas}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </cdk-virtual-scroll-viewport>
+
+                        <!-----
+                            <table class="responsive-table highlight">
                             <thead>
                                 <tr>
                                     <th>İsim</th>
@@ -66,6 +89,7 @@
                                 <td>{{i.maas}}</td>
                             </tr>
                         </table>
+                        ----->
                     </div>
                 </div>
             </div>

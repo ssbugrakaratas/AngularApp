@@ -1,0 +1,7 @@
+table {
+    width: 100%;
+}
+
+cdk-virtual-scroll-viewport {
+    height: 400px;
+}
