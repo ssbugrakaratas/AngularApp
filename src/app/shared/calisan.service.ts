@@ -9,7 +9,7 @@ import {Calisan} from './calisan.model'
   providedIn: 'root'
 })
 export class CalisanService {
-  secili_calisan : Calisan;
+  seciliCalisan : Calisan;
   calisanlar : Calisan[];
   readonly db_URL = 'http://localhost:3000/calisanlar'
 

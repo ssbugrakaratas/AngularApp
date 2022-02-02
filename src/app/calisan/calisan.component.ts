@@ -12,9 +12,9 @@ declare var M : any;
 })
 export class CalisanComponent implements OnInit {
 
-  constructor(public calisan_servis: CalisanService) { }
+  constructor(public calisanServis: CalisanService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.resetForm();
   }
 
@@ -23,19 +23,19 @@ export class CalisanComponent implements OnInit {
   resetForm(form ?: NgForm){
     if(form){
       form.reset();
-      this.calisan_servis.secili_calisan = {
-        _id:"",
-        isim:"",
-        pozisyon:"",
-        ofis:"",
-        maas: null,
-      }
+    }
+    this.calisanServis.seciliCalisan = {
+      _id:"",
+      isim:"",
+      pozisyon:"",
+      ofis:"",
+      maas: null
     }
 
   }
 
   onSubmit(form: NgForm){
-    this.calisan_servis.postCalisan(form.value).subscribe((res)=> {
+    this.calisanServis.postCalisan(form.value).subscribe((res)=> {
       this.resetForm(form);
       M.toast({html:'Kaydetme İşlemi Başarılı', classes : 'rounded'});
     });
