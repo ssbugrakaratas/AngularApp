@@ -51,7 +51,7 @@
                     <div class="col s6">
                         <span class="card-title">BAŞLIK</span>
 
-                        <cdk-virtual-scroll-viewport itemSize="5" style="height: 200px; ">
+                        <cdk-virtual-scroll-viewport itemSize="5">
                             <table class="responsive-table highlight">
                                 <thead>
                                     <tr>
@@ -62,7 +62,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr *cdkVirtualFor="let i of calisanServis.calisanlar">
+                                    <tr *cdkVirtualFor="let i of calisanServis.calisanlar ">
                                         <td>{{i.isim}}</td>
                                         <td>{{i.pozisyon}}</td>
                                         <td>{{i.ofis}}</td>
@@ -71,25 +71,6 @@
                                 </tbody>
                             </table>
                         </cdk-virtual-scroll-viewport>
-
-                        <!-----
-                            <table class="responsive-table highlight">
-                            <thead>
-                                <tr>
-                                    <th>İsim</th>
-                                    <th>Pozisyon</th>
-                                    <th>Ofis</th>
-                                    <th>Maas</th>
-                                </tr>
-                            </thead>
-                            <tr *ngFor="let i of calisanServis.calisanlar">
-                                <td>{{i.isim}}</td>
-                                <td>{{i.pozisyon}}</td>
-                                <td>{{i.ofis}}</td>
-                                <td>{{i.maas}}</td>
-                            </tr>
-                        </table>
-                        ----->
                     </div>
                 </div>
             </div>
