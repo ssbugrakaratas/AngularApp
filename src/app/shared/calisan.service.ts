@@ -17,7 +17,7 @@ export class CalisanService {
 
 
   postCalisan(eklenecek_calisan : Calisan){
-    return this.http.post(`${this.db_URL}+"ekle"`,eklenecek_calisan);
+    return this.http.post(`${this.db_URL}/ekle`,eklenecek_calisan);
   }
 
 }
