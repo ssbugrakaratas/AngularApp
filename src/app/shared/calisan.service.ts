@@ -9,8 +9,15 @@ import {Calisan} from './calisan.model'
   providedIn: 'root'
 })
 export class CalisanService {
-  secili_calisan:Calisan;
+  secili_calisan : Calisan;
   calisanlar : Calisan[];
+  readonly db_URL = 'http://localhost:3000/calisanlar'
 
-  constructor() { }
+  constructor(public http: HttpClient) { }
+
+
+  postCalisan(eklenecek_calisan : Calisan){
+    return this.http.post(`${this.db_URL}+"ekle"`,eklenecek_calisan);
+  }
+
 }

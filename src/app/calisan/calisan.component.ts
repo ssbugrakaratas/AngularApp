@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 
 import { CalisanService } from "../shared/calisan.service";
 
+declare var M : any;
 @Component({
   selector: 'app-calisan',
   templateUrl: './calisan.component.html',
@@ -34,6 +35,12 @@ export class CalisanComponent implements OnInit {
   }
 
   onSubmit(form: NgForm){
+    this.calisan_servis.postCalisan(form.value).subscribe((res)=> {
+      this.resetForm(form);
+      M.toast({html:'Kaydetme İşlemi Başarılı', classes : 'rounded'});
+    });
+
+
   }
 
 }
