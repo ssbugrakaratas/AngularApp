@@ -24,4 +24,12 @@ export class CalisanService {
     return this.http.get(`${this.db_URL}/listele`);
   }
 
+  putCalisan(guncellenecek_calisan : Calisan){
+    return this.http.put(`${this.db_URL}/${guncellenecek_calisan._id}`,guncellenecek_calisan);
+  }
+
+  deleteCalisan(_id:string){
+    return this.http.delete(`${this.db_URL}/${_id}`);
+  }
+
 }

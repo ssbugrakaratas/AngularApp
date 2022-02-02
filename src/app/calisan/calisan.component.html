@@ -51,22 +51,35 @@
                     <div class="col s6">
                         <span class="card-title">BAŞLIK</span>
 
+
+                        <table class="responsive-table highlight">
+                            <thead>
+                                <tr>
+                                    <th>İsim</th>
+                                    <th>Pozisyon</th>
+                                    <th>Ofis</th>
+                                    <th>Maas</th>
+                                </tr>
+                            </thead>
+                        </table>
                         <cdk-virtual-scroll-viewport itemSize="5">
-                            <table class="responsive-table highlight">
-                                <thead>
-                                    <tr>
-                                        <th>İsim</th>
-                                        <th>Pozisyon</th>
-                                        <th>Ofis</th>
-                                        <th>Maas</th>
-                                    </tr>
-                                </thead>
+                            <table>
                                 <tbody>
                                     <tr *cdkVirtualFor="let i of calisanServis.calisanlar ">
                                         <td>{{i.isim}}</td>
                                         <td>{{i.pozisyon}}</td>
                                         <td>{{i.ofis}}</td>
                                         <td>{{i.maas}}</td>
+                                        <td>
+                                            <a class="action-btn" (click)="guncelleCalisan(i)">
+                                                <i class="material-icons">edit</i>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a class="action-btn" (click)="silCalisan(i._id,calisanForm)">
+                                                <i class="material-icons">delete</i>
+                                            </a>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>

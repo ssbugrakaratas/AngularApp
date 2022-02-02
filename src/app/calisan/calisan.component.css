@@ -5,3 +5,7 @@ table {
 cdk-virtual-scroll-viewport {
     height: 200px;
 }
+
+.input-field input {
+    color: rgb(255, 255, 255);
+}
