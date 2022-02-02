@@ -1,4 +1,4 @@
-#MEAN Project Deneme 31-01-2022 to ∞
+MEAN Project Deneme 31-01-2022 to ∞
 
 ## AngularApp
 
