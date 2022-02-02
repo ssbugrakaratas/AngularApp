@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Calisan } from '../shared/calisan.model';
 
 import { CalisanService } from "../shared/calisan.service";
 
@@ -16,6 +17,7 @@ export class CalisanComponent implements OnInit {
 
   ngOnInit() {
     this.resetForm();
+    this.getirCalisan();
   }
 
   
@@ -31,16 +33,21 @@ export class CalisanComponent implements OnInit {
       ofis:"",
       maas: null
     }
-
   }
 
   onSubmit(form: NgForm){
     this.calisanServis.postCalisan(form.value).subscribe((res)=> {
       this.resetForm(form);
       M.toast({html:'Kaydetme İşlemi Başarılı', classes : 'rounded'});
+      this.getirCalisan();
     });
+  }
 
 
+  getirCalisan(){
+    this.calisanServis.getCalisanlar().subscribe((res) =>{
+      this.calisanServis.calisanlar = res as Calisan[];
+    });
   }
 
 }

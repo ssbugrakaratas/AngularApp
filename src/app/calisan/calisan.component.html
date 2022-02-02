@@ -50,7 +50,22 @@
                     </div>
                     <div class="col s6">
                         <span class="card-title">BAŞLIK</span>
-                        <p>calisan works!</p>
+                        <table class="responsive-table highlight">
+                            <thead>
+                                <tr>
+                                    <th>İsim</th>
+                                    <th>Pozisyon</th>
+                                    <th>Ofis</th>
+                                    <th>Maas</th>
+                                </tr>
+                            </thead>
+                            <tr *ngFor="let i of calisanServis.calisanlar">
+                                <td>{{i.isim}}</td>
+                                <td>{{i.pozisyon}}</td>
+                                <td>{{i.ofis}}</td>
+                                <td>{{i.maas}}</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>

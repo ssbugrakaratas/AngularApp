@@ -20,4 +20,8 @@ export class CalisanService {
     return this.http.post(`${this.db_URL}/ekle`,eklenecek_calisan);
   }
 
+  getCalisanlar(){
+    return this.http.get(`${this.db_URL}/listele`);
+  }
+
 }
