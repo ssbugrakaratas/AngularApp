@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var M: any;
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,11 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
+    const dropdown_items = document.querySelectorAll(".dropdown-trigger");
+    M.Dropdown.init(dropdown_items, {
+      coverTrigger : false
+    });
   }
+
 
 }
