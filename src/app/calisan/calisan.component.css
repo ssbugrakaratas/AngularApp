@@ -1,9 +1,22 @@
 table {
     width: 100%;
+    overflow: auto;
+}
+
+thead {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #37474f;
 }
 
 cdk-virtual-scroll-viewport {
     height: 200px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
 
 .input-field input {

@@ -49,7 +49,7 @@
 
                     </div>
                     <div class="col s6">
-                        <span class="card-title">BAŞLIK</span>
+                        <span style="text-align : center; font-size: 40px; font-weight: bold; font-style: italic;" class="card-title">Personel Listesi</span>
                         <cdk-virtual-scroll-viewport itemSize="5">
                             <table class="responsive-table highlight">
                                 <thead>
@@ -58,6 +58,8 @@
                                         <th>Pozisyon</th>
                                         <th>Ofis</th>
                                         <th>Maas</th>
+                                        <th></th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -68,12 +70,12 @@
                                         <td>{{i.maas}}</td>
                                         <td>
                                             <a class="action-btn" (click)="guncelleCalisan(i)">
-                                                <i class="material-icons">edit</i>
+                                                <i style="color:greenyellow" class="material-icons">edit</i>
                                             </a>
                                         </td>
                                         <td>
                                             <a class="action-btn" (click)="silCalisan(i._id,calisanForm)">
-                                                <i class="material-icons">delete</i>
+                                                <i style="color:red" class="material-icons">delete</i>
                                             </a>
                                         </td>
                                     </tr>
