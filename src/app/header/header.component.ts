@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     const dropdown_items = document.querySelectorAll(".dropdown-trigger");
     M.Dropdown.init(dropdown_items, {
-      coverTrigger : false
+      coverTrigger: false
     });
   }
 
